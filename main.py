@@ -31,3 +31,27 @@ def computer_guess(x):
 
 
 guess(10)
+
+#If you don't wany to get an error when low and high numbers are same use this code below:
+
+def Guess_a_number(x):
+    low = 1
+    high = x
+    feedback = ''
+    while feedback != 'c':
+        if low == x:
+            print(f'Select a number starting from {low}.')
+            break
+        else:
+            guess = random.randint(low, high)
+        feedback = input(f'Is {guess} too high (H), too low (L), or correct (C)?? ').lower()
+        if feedback == 'h':
+            high = guess - 1
+        elif feedback == 'l':
+            low = guess + 1
+        else:
+            print(f'Yay! The computer guessed your number, {guess}, correctly!')
+
+    return 'Thank you!!'
+
+print(Guess_a_number(1))
