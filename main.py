@@ -31,4 +31,4 @@ def computer_guess(x):
 
 
 guess(10)
-computer_guess(x)
+computer_guess(10)
